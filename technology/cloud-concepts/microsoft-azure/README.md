@@ -4,7 +4,7 @@ description: Because Building Your Own Data Center Isn't a Weekend Project
 
 # Microsoft Azure
 
-<figure><img src="../../.gitbook/assets/azure.png" alt="Microsoft Azure Logo" width="188"><figcaption><p>Cool logo, right?</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/azure.png" alt="Microsoft Azure Logo" width="188"><figcaption><p>Cool logo, right?</p></figcaption></figure>
 
 ## What's an Azure?
 

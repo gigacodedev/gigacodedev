@@ -6,25 +6,25 @@ description: Who needs an SDK?
 
 With the configuration done, we can now test out our Bot Service. We'll need to connect a messaging endpoint to receive the messages and send a response. For the sake of testing, we'll use the awesome tool [https://webhook.site](https://webhook.site). This will allow us to generate a webhook and capture any data sent to it for inspection. Copy your custom webhook URL
 
-<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 Go back to your Bot Service and click on Configuration in the left navigation bar. Enter your webhook URL into the Messaging Endpoint field and apply the settings
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Go back to the Channels tab in the left navigation bar, and click "Open in Teams" under Actions for your Teams channel connector
 
-<figure><img src="../../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
 
 Teams will now open a conversation with your bot! Send it a message so it can send data to Webhook.Site
 
-<figure><img src="../../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
 
 ## Receiving messages
 
 Back in our Webhook.Site tab after we sent something to our bot chat, you'll find data that was sent as a POST to our webhook. This includes information on what the message says, where it came from, who sent it, and how to reply to it
 
-<figure><img src="../../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
 
 ## Responding to Messages
 
@@ -51,7 +51,7 @@ grant_type=client_credentials&client_id=MICROSOFT-APP-ID&client_secret=MICROSOFT
 
 In Insomnia, it looks like this:
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 To send in `curl`, format it as:
 
@@ -104,7 +104,7 @@ The body for the reply to a chat message should be in JSON and at minimum contai
 
 Putting this all together, in our case this would look like the following in Insomnia
 
-<figure><img src="../../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
 
 In `curl`, this would be:
 
@@ -132,8 +132,8 @@ curl --request POST \
 
 When successfully sent, you'll get a `201` success code for the request and the response body of an ID for your message
 
-<figure><img src="../../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
 
 Your message is then sent to the user!
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
