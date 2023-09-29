@@ -4,7 +4,7 @@ In the course of securing and supporting ourselves and our customers, we often c
 
 ## Initial Discovery
 
-Typically, my day starts with reviewing the general security state of our organization. This includes, among other tasks, reviewing our Microsoft Defender Incidents and Alerts to identify any detections overnight that weren't immediate enough for our SOC partner to raise the alarm. As such, these are typically user reported spam emails and Defender for 365 captured Phishing emails. These sorts of alerts can sit until the AM as Defender has already Quarantined or soft deleted the message after its Automated Investigation and Response (AIR) investigation. This is where the fun started
+Typically, my day starts with reviewing the general security state of our organization. This includes, among other tasks, reviewing our Microsoft Defender Incidents and Alerts to identify any detections overnight that weren't immediate enough for our security partner to raise the alarm. As such, these are typically user reported spam emails and Defender for 365 captured Phishing emails. These sorts of alerts can sit until the morning as Defender has already Quarantined or soft deleted the message after its Automated Investigation and Response (AIR) investigation. This is where the fun started
 
 ### The Incident
 
@@ -26,9 +26,9 @@ Already familiar with JWTs?[ Jump ahead to when we get back to our detection!](i
 
 ### What's a JWT anyways?
 
-A JWT, or JSON Web Token, is a way to format and encode data for the purposes of transmitting information over the internet as a JSON object. This string of characters is URL safe (doesn't require any additional encoding) and can easily be inserted into a URL, even if you generally do _not_ want to do that. The standard itself is defined in [RFC7519](https://datatracker.ietf.org/doc/html/rfc7519).
+A JWT, or JSON Web Token, is a way to format and encode data for the purposes of transmitting information over the internet as a JSON object. This string of characters is URL safe (doesn't require any additional encoding) and can easily be inserted into a URL. The standard itself is defined in [RFC7519](https://datatracker.ietf.org/doc/html/rfc7519).
 
-Due to the resulting object being relatively compact and in a common and consistent format, this is most often used to transmit authentication claims between services. If you've ever made an OAUTH2.0 request, you've seen this format before. However, as we will discover, JWTs can be crafted to transmit really any information formatted as JSON.
+Due to the resulting object being relatively compact and in a common and consistent format, this is often used to transmit authentication claims between services. If you've ever made an OAUTH2.0 request, you've seen this format before. However, as we will discover, JWTs can be crafted to transmit really any information formatted as JSON.
 
 ### How does a JWT work?
 
@@ -133,7 +133,7 @@ Back to our phishing URL, let's decode this JWT value in the slug. Running throu
 }.[Signature]
 ```
 
-Very interesting! So what does this mean? Let's pick things apart.
+Very interesting! So, what does this mean? Let's pick things apart.
 
 #### Header
 
@@ -154,4 +154,16 @@ As we only have a hash to go off, we are unable to derive the secret key. Howeve
 ### Investigation Defenses
 
 As with many instances of attacker-controlled webservers, some basic steps are taken to prevent investigation. Chiefly, if an attempt is made to directly navigate to the malicious domain, the webpage will simply exit itself. A generic 404 response is returned when any other path is attempted to be accessed. Further, a scan of the IPs linked to the malicious domain names show the service `awselb/2.0` on ports 80 and 443, indicating the domain resolves to an AWS Elastic Load Balancer at the edge. This essentially presents the same challenges as a reverse proxy, as the traffic is routed internally to its resource(s) assigned when the port listener receives traffic at the edge.
+
+### IoCs
+
+| Type   | IoC                      |
+| ------ | ------------------------ |
+| Domain | drip\[.]la               |
+| Domain | login-office365\[.]cloud |
+| IP     | 34.234.235\[.]177        |
+| IP     | 54.82.80\[.]171          |
+| IP     | 3.228.200\[.]240         |
+| IP     | 50.19.188\[.]48          |
+| IP     | 18.205.79\[.]17          |
 
