@@ -22,6 +22,7 @@
       * [Creating your Bot Service](technology/cloud-concepts/microsoft-azure/bot-framework/creating-your-bot-service.md)
       * [Interacting with your Bot Service's API](technology/cloud-concepts/microsoft-azure/bot-framework/interacting-with-your-bot-services-api.md)
       * [Sending Proactive Messages](technology/cloud-concepts/microsoft-azure/bot-framework/sending-proactive-messages.md)
+      * [Packaging Your Bot](technology/cloud-concepts/microsoft-azure/bot-framework/packaging-your-bot.md)
 
 ## 😀 People
 

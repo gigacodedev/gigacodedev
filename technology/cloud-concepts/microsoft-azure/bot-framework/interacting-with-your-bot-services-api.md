@@ -6,15 +6,15 @@ description: Who needs an SDK?
 
 With the configuration done, we can now test out our Bot Service. We'll need to connect a messaging endpoint to receive the messages and send a response. For the sake of testing, we'll use the awesome tool [https://webhook.site](https://webhook.site). This will allow us to generate a webhook and capture any data sent to it for inspection. Copy your custom webhook URL
 
-<figure><img src="../../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Go back to your Bot Service and click on Configuration in the left navigation bar. Enter your webhook URL into the Messaging Endpoint field and apply the settings
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Go back to the Channels tab in the left navigation bar, and click "Open in Teams" under Actions for your Teams channel connector
 
-<figure><img src="../../../../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (13) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Teams will now open a conversation with your bot! Send it a message so it can send data to Webhook.Site
 
@@ -51,7 +51,7 @@ grant_type=client_credentials&client_id=MICROSOFT-APP-ID&client_secret=MICROSOFT
 
 In Insomnia, it looks like this:
 
-<figure><img src="../../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 To send in `curl`, format it as:
 
@@ -136,4 +136,4 @@ When successfully sent, you'll get a `201` success code for the request and the 
 
 Your message is then sent to the user!
 
-<figure><img src="../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>

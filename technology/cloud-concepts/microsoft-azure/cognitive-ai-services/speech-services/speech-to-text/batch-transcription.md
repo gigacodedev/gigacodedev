@@ -17,23 +17,23 @@ Before we process speech, we need something to give the API to process. With bat
 We'll be using our API keys for this demonstration. These can be found in the Keys and Endpoint section of your Speech Service in the Azure portal:\
 
 
-<figure><img src="../../../../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Copy Key 1 somewhere safe for now. We need a secure way to get these keys, so let's use a KeyVault!
 
 1. Provision the keyvault resource. Similar to the speech service, click the Create button in your Resource Group, then search for and choose Key Vault\
-   ![](<../../../../../../.gitbook/assets/image (5).png>)
+   ![](<../../../../../../.gitbook/assets/image (5) (1).png>)
 2.  Configure the deployment details on the Basics page\
 
 
-    <figure><img src="../../../../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
     Similar to the Speech service, the cost of a KeyVault is very small. 10,000 secrets transactions, much more than we will need, only costs $0.03. The Standard pricing tier is sufficient for most things.
 3. Proceed to Review + Create, then create the resource
 4.  In your keyvault, head to the secrets page and select Generate/Import\
 
 
-    <figure><img src="../../../../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 5. Enter the name and paste your API key into the Secret Value box. Ensure the secret is enabled and click Create
 
 ### Authenticating to our KeyVault
@@ -43,32 +43,32 @@ Now that we've securely stored our key somewhere we can pull from, we need a way
 
 
 1. In the Entra Identity portal, select Applications, then App Registrations. Create a New Registration\
-   ![](<../../../../../../.gitbook/assets/image (8).png>)\
-   ![](<../../../../../../.gitbook/assets/image (9).png>)
+   ![](<../../../../../../.gitbook/assets/image (8) (1).png>)\
+   ![](<../../../../../../.gitbook/assets/image (9) (1).png>)
 2.  Enter the name, select the Single Tenant account type, and create the registration\
 
 
-    <figure><img src="../../../../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 3.  In the app registration, go to the Secrets page, then create a new secret\
 
 
-    <figure><img src="../../../../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../../../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
     **This secret will not be displayed again! Save it somewhere safe**
 4.  Go to the overview and also note down the Application (client) ID and the Directory (tenant) ID. I've saved all as environment variables in my API interaction tool, Insomnia\
 
 
-    <figure><img src="../../../../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../../../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 5.  Lastly, we need to authorize this app registration to get secrets from our KeyVault. In the KeyVault, go to the Access Control page and add a new role assignment\
 
 
-    <figure><img src="../../../../../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../../../../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
 6.  Select the role Key Vault Secrets User, then add the Service Principal we just created\
 
 
-    <figure><img src="../../../../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../../../../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Step 2: Creating the Batch job
 

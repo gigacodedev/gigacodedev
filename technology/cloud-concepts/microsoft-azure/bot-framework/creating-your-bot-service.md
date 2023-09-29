@@ -38,7 +38,7 @@ Choosing the correct App Type under Microsoft App ID is crucial. The different t
 
 Given these behaviors, we'll choose Multi-Tenant as we want a Client ID and Secret to be used by our RPA platform. If we were making a bot that was hosted on an Azure App Service, Managed Identity would be recommended.
 
-<figure><img src="../../../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (11) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 You can now proceed to assign any tags you may want, and create the resource
 
@@ -48,7 +48,7 @@ You can now proceed to assign any tags you may want, and create the resource
 
 Once your resource is created, navigate to it. Select Bot Profile under Settings in the left navigation bar
 
-![](<../../../../.gitbook/assets/image (8) (1).png>)
+![](<../../../../.gitbook/assets/image (8) (1) (1).png>)
 
 On the Profile page you can set your bot's icon, name, and description
 
@@ -58,11 +58,11 @@ On the Profile page you can set your bot's icon, name, and description
 
 Click the Channels button in the left navigation bar
 
-![](<../../../../.gitbook/assets/image (14) (1).png>)
+![](<../../../../.gitbook/assets/image (14) (1) (1).png>)
 
 Select the Microsoft Teams channel
 
-<figure><img src="../../../../.gitbook/assets/image (15) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (15) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Accept the terms and click the Apply button to choose the Microsoft Teams Commercial channel. You'll now see Teams under your connected channels with a Healthy icon
 
@@ -76,16 +76,16 @@ Your bot will happily send requests to you all day, but when responding you need
 
 Under Owned Applications, select your bot
 
-<figure><img src="../../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (10) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 In the Essentials tab on the Overview page, note the Application (client) ID, and Directory (tenant) ID
 
-![](<../../../../.gitbook/assets/image (6) (1).png>)
+![](<../../../../.gitbook/assets/image (6) (1) (1).png>)
 
 Go to Certificates & Secrets, then create a new Client Secret. Name this secret and set its validity length
 
-<figure><img src="../../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Copy the Secret Value to your clipboard before leaving the page! This secret will not be shown again, so document it somewhere safe
 
-<figure><img src="../../../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (16) (1).png" alt=""><figcaption></figcaption></figure>

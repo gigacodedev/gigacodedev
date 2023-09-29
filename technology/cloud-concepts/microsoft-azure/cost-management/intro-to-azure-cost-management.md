@@ -38,15 +38,15 @@ Assigning a Budget to an Azure Subscription or Resource Group helps plan for cos
 
 Start out in the Azure portal, in the scope you'd like the budget assigned to. For example, we want to place a budget on our Lab resource group, so we'll navigate there and select Budgets in the left navigation bar:
 
-![](<../../../../.gitbook/assets/image (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (1) (1) (1) (1).png>)
 
 In Budgets, we'll select the Add button. We can also change our scope to the parent Subscription here, if we'd like
 
-![](<../../../../.gitbook/assets/image (8) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (8) (1) (1) (1).png>)
 
 We'll then be shown the budget creation screen. Here we can set the name of the budget, the reset period, and any start and end dates to be defined. By default, budgets will be valid for 2 years. Helpfully, a total scope cost is shown in the right side of this page to help us define what the budget limit should be. As this is a lab group costs can fluctuate depending on what is being tested, so I've set this to a $100.
 
-<figure><img src="../../../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption><p>Azure Budget Creation</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption><p>Azure Budget Creation</p></figcaption></figure>
 
 We'll now set our alert conditions on the next page. I've configured this to send me an email once this resource group gets to 80% of actual costs on the budget, or $80. Don't worry about setting an action group for now. I've then entered my email and saved the new budget and alerts.
 
