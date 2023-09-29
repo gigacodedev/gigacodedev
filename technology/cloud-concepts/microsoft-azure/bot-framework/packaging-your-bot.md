@@ -128,6 +128,8 @@ Finally, we have the fun part where we can customize even further:
 
 Want different commands for different scopes? Just make a new object containing the above data in the `bot.commandLists` array!
 
+Once you're done, save this file as `manifest.json` in the same directory as the icons
+
 #### Packing it all up
 
 Now that we have our icons and manifest ready, and they're all in the same directory, we can turn this into a format Teams can recognize. Which is.... a simple ZIP file!
