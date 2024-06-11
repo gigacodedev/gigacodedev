@@ -21,7 +21,7 @@ Notice anything familiar? That URL slug certainly looks like an authentication t
 ## Understanding the Technique
 
 {% hint style="info" %}
-Already familiar with JWTs?[ Jump ahead to when we get back to our detection!](in-the-wild-abusing-jwt-encoding.md#our-phishing-url)
+Already familiar with JWTs?[Jump ahead to when we get back to our detection!](in-the-wild-abusing-jwt-encoding.md#our-phishing-url)
 {% endhint %}
 
 ### What's a JWT anyways?
@@ -117,7 +117,7 @@ Looks good! Now lets make sure nothing got tampered with and the token is valid.
 
 Back to our phishing URL, let's decode this JWT value in the slug. Running through a base64 decoder, we get the (slightly modified for publishing) result of:
 
-```
+```json
 {
   "alg": "HS256"
 }.{
@@ -166,4 +166,3 @@ As with many instances of attacker-controlled webservers, some basic steps are t
 | IP     | 3.228.200\[.]240         |
 | IP     | 50.19.188\[.]48          |
 | IP     | 18.205.79\[.]17          |
-

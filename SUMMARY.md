@@ -6,6 +6,7 @@
 
 * [🔐 Cybersecurity](technology/cybersecurity/README.md)
   * [🚨 In the Wild - Abusing JWT Encoding](technology/cybersecurity/in-the-wild-abusing-jwt-encoding.md)
+  * [Intro to Cybersecurity](technology/cybersecurity/intro-to-cybersecurity.md)
 * [🌩 Cloud Concepts](technology/cloud-concepts/README.md)
   * [Microsoft Azure](technology/cloud-concepts/microsoft-azure/README.md)
     * [🔮 Cognitive AI Services](technology/cloud-concepts/microsoft-azure/cognitive-ai-services/README.md)
