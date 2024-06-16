@@ -1,4 +1,4 @@
-# Pardon the dust while we build....
+# Welcome to GigaCode!
 
 👋 Hi, I’m Brandon!
 
