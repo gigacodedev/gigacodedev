@@ -12,7 +12,7 @@ Once you have your account, you'll see the Cloudflare dashboard. Head over to th
 
 For most people starting off, either as a personal lab tenant or in the evaluation phase for your organization, and free tier plan will be fine. The main difference you get between the free and Pay-As-You-Go plans is a 100% Uptime SLA, chat/email support, more network locations, and longer log retention. You will also be limited to a maximum of 50 users on the free tier plan. For the rest of this guide, I will be working with features available in the free plan unless stated otherwise
 
-{% hint style="info"}
+{% hint style="info" %}
 You may be asked to enter card information at this stage. This is required for the free plan as a $0 purchase, but you will not be charged unless you upgrade
 {% endhint %}
 
@@ -47,14 +47,14 @@ You can also enable Enhanced Logging here. This will read connection information
 - Proxy
   - Let's enable this setting first. This will ensure all traffic is proxied through the WARP agent, and network policies are applied. You can select TCP, UDP, and ICMP traffic. We'll just start with TCP
 
-{% hint style="warning"}
+{% hint style="warning" %}
 Proxying UDP traffic may have significant negative effcts on your network, especially with VOIP performance. Be sure you fully understand the impact of enabling any proxy options before doing so in a production environment
 {% endhint %}
 
 - TLS decryption
   - With most traffic being HTTPS, you will likely be limited in the amount of information you can inspect. This option will allow you to scan HTTPS traffic by allowing a root CA certificate installed on the endpoint with WARP to decrypt HTTPS traffic
 
-{% hint style="danger"}
+{% hint style="danger" %}
 This is a *very* impactful setting, and is prone to breaking things. Many apps use certificate pinning, and will not function properly with TLS decryption enabled. Exclusions must be set for these applications. Before enabling this in a production environment, be sure you've tested all line of business apps to ensure compatibility. More information can be found [in this Cloudflare KB document, which includes a list of known incompatible applications.](https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/troubleshooting/common-issues/#tls-decryption-is-enabled-and-the-app-or-site-does-certificate-pinning)
 {% endhint %}
 
