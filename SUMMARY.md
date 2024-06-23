@@ -23,6 +23,9 @@
       * [Interacting with your Bot Service's API](technology/cloud-concepts/microsoft-azure/bot-framework/interacting-with-your-bot-services-api.md)
       * [Sending Proactive Messages](technology/cloud-concepts/microsoft-azure/bot-framework/sending-proactive-messages.md)
       * [Packaging Your Bot](technology/cloud-concepts/microsoft-azure/bot-framework/packaging-your-bot.md)
+* [Zero Trust Networking](technology/zero-trust-networking/)
+  * [What is Zero Trust](technology/zero-trust-networking/what-is-zero-trust.md)
+  * [Setting Up Your Tenant](technology/zero-trust-networking/setting-up-your-tenant.md)
 
 ## 😀 People
 
